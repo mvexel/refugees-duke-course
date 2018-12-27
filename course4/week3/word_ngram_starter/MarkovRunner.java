@@ -28,13 +28,27 @@ public class MarkovRunner {
         } 
     } 
 
-    public void runMarkov() { 
+    public void runWordMarkovOne() { 
+        FileResource fr = new FileResource(); 
+        String st = fr.asString(); 
+        //st = st.replace('\n', ' '); 
+        MarkovWordOne markovWord = new MarkovWordOne(); 
+        runModel(markovWord, st, 120, 175); 
+    } 
+    
+    public void runWordMarkovTwo() { 
         FileResource fr = new FileResource(); 
         String st = fr.asString(); 
         st = st.replace('\n', ' '); 
-        MarkovWordOne markovWord = new MarkovWordOne(); 
-        runModel(markovWord, st, 200); 
-    } 
+        MarkovWordTwo markovWord = new MarkovWordTwo(); 
+        runModel(markovWord, st, 100, 549); 
+    }     
+    
+    public void runWordMarkovTester() {
+        String text = "this is just a test yes this is a simple test";
+        MarkovWordTwo mt = new MarkovWordTwo();
+        runModel(mt, text, 50, 42);
+    }
 
     private void printOut(String s){
         String[] words = s.split("\\s+");
