@@ -16,29 +16,34 @@ public class WordGram {
     }
 
     public int length(){
-        // TODO: Complete this method
-        return 0;
+        return myWords.length;
     }
 
     public String toString(){
-        String ret = "";
-        // TODO: Complete this method
-
-        return ret.trim();
+        return String.join(" ", myWords);
     }
 
     public boolean equals(Object o) {
-        WordGram other = (WordGram) o;
-        // TODO: Complete this method
-        return true;
-
+        final WordGram other = (WordGram) o;
+        if (other.length() != this.length()) {
+            return false;
+        }
+        boolean isEqual = false;
+        for (int i = 0; i < length(); i++) {
+            isEqual = isEqual || this.wordAt(i).equals(other.wordAt(i));
+        }
+        return isEqual;
     }
 
-    public WordGram shiftAdd(String word) {	
-        WordGram out = new WordGram(myWords, 0, myWords.length);
-        // shift all words one towards 0 and add word at the end. 
-        // you lose the first word
-        // TODO: Complete this method
+    public WordGram shiftAdd(String word) { 
+        String[] otherWords = new String[myWords.length];
+        System.out.println("otherWords initialized, length: " + otherWords.length);
+        for (int i = 0; i < myWords.length - 1; i++) {
+            otherWords[i] = myWords[i+1];
+            System.out.println("otherWords added: " + otherWords[i] + " at position " + i);
+        }
+        otherWords[otherWords.length - 1] = word;
+        WordGram out = new WordGram(otherWords, 0, otherWords.length);
         return out;
     }
 
