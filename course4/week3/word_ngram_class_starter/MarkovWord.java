@@ -1,0 +1,85 @@
+
+/**
+ * Write a description of MarkovWord here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+
+import java.util.Random;
+import java.util.ArrayList;
+
+public class MarkovWord implements IMarkovModel {
+
+    private String[] myText;
+    private Random myRandom;
+    private int myOrder;
+
+    public MarkovWord(int order) {
+        myRandom = new Random();
+        myOrder = order;
+    }
+
+    public void setRandom(int seed) {
+        myRandom.setSeed(seed);
+    }
+
+    public String getRandomText(int numWords){
+        StringBuilder sb = new StringBuilder();
+        // The first WordGram is completely random
+        System.out.println("Going to get random text of length " + numWords + " and order " + myOrder);
+        int index = myRandom.nextInt(myText.length - myOrder); 
+        WordGram currentWordGram = new WordGram(myText, index, myOrder);
+        sb.append(currentWordGram.toString());
+        sb.append(" ");
+        System.out.println("initial string is " + sb.toString());
+        for(int k=0; k < numWords - 1; k++){
+            ArrayList<String> follows = getFollows(currentWordGram);
+            if (follows.size() == 0) {
+                System.out.println("No followers for " + currentWordGram.toString());
+                break;
+            }
+            System.out.println("Followers for " + currentWordGram.toString() + ": " + follows);
+            index = myRandom.nextInt(follows.size());
+            String nextWord = follows.get(index);
+            System.out.println("picking " + nextWord);
+            currentWordGram.shiftAdd(nextWord);
+            sb.append(currentWordGram.toString());
+            System.out.println("currentWordGram: " + currentWordGram.toString());
+            //System.out.println("follows: " + follows);
+        }
+        return sb.toString().trim();
+    }    
+
+    public void setTraining(String text){
+        myText = text.split("\\s+");
+    }
+
+    private ArrayList<String> getFollows(WordGram kGram) {
+        ArrayList<String> follows = new ArrayList<String>();
+        int pos = 0;
+        while (pos < myText.length) {
+            int start = indexOf(myText, kGram, pos);
+            if (start == -1) {
+                break;
+            }
+            if (start >= myText.length - 1) {
+                break;
+            }
+            String next = myText[start + 1];
+            follows.add(next);
+            pos = start + 1;
+        }
+        return follows;
+    }
+
+    private int indexOf(String[] words, WordGram target, int start) {
+        for (int i = start; i < words.length; i++) {
+            if (words[i].equals(target.toString())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+}

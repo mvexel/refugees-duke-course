@@ -36,9 +36,10 @@ public class WordGram {
     }
 
     public WordGram shiftAdd(String word) { 
+        // Initialize String array to hold the new Wordgram words
         String[] otherWords = new String[myWords.length];
-        System.out.println("otherWords initialized, length: " + otherWords.length);
-        for (int i = 0; i < myWords.length - 1; i++) {
+        // Add words 
+        for (int i = 0; i < myWords.length; i++) {
             otherWords[i] = myWords[i+1];
             System.out.println("otherWords added: " + otherWords[i] + " at position " + i);
         }
