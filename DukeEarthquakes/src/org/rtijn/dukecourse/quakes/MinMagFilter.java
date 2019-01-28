@@ -1,3 +1,4 @@
+package org.rtijn.dukecourse.quakes;
 
 /**
  * Write a description of class MinMaxFilter here.

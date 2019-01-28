@@ -1,6 +1,6 @@
-
+package org.rtijn.dukecourse.quakes;
 /**
- * Write a description of class MagnitudeComparator here.
+ * Write a description of class org.rtijn.dukecourse.quakes.MagnitudeComparator here.
  * 
  * @author (your name) 
  * @version (a version number or a date)

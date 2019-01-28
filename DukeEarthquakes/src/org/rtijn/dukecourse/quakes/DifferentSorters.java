@@ -1,6 +1,6 @@
-
+package org.rtijn.dukecourse.quakes;
 /**
- * Write a description of class DifferentSorters here.
+ * Write a description of class org.rtijn.dukecourse.quakes.DifferentSorters here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -38,7 +38,7 @@ public class DifferentSorters {
         String source = "data/nov20quakedata.atom";
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         ArrayList<QuakeEntry> list  = parser.read(source);
-        // Location is Durham, NC
+        // org.rtijn.dukecourse.quakes.Location is Durham, NC
         Location where = new Location(35.9886, -78.9072);
         Collections.sort(list, new DistanceComparator(where));
         for(QuakeEntry qe: list) {

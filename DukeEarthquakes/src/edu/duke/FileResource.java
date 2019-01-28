@@ -1,5 +1,6 @@
 package edu.duke;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.net.URL;
@@ -375,7 +376,7 @@ public class FileResource {
     private String initFromStream (InputStream stream) {
         BufferedReader buff = null;
         try {
-            buff = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+            buff = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
             StringBuilder contents = new StringBuilder();
             String line = null;
             while ((line = buff.readLine()) != null) {

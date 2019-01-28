@@ -1,4 +1,4 @@
-package org.rtijn.wordgrams;
+package org.rtijn.dukecourse.markov;
 
 /**
  * Write a description of class MarkovZero here.
@@ -9,10 +9,7 @@ package org.rtijn.wordgrams;
 
 import java.util.Random;
 
-public class MarkovZero {
-    private String myText;
-	private Random myRandom;
-	
+public class MarkovZero extends AbstractMarkovModel implements IMarkovModel {
 	public MarkovZero() {
 		myRandom = new Random();
 	}
@@ -37,4 +34,10 @@ public class MarkovZero {
 		
 		return sb.toString();
 	}
+
+	@Override
+	public String toString() {
+		return "Markov Model of order 0";
+	}
+
 }

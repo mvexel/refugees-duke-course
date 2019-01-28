@@ -1,4 +1,4 @@
-
+package org.rtijn.dukecourse.quakes;
 /**
  * Find N-closest quakes
  * 

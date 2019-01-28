@@ -1,3 +1,4 @@
+package org.rtijn.dukecourse.quakes;
 
 public class PhraseFilter implements Filter {
 
@@ -30,10 +31,7 @@ public class PhraseFilter implements Filter {
 		if (this.where.equals("end") && qe.getInfo().endsWith(phrase)) {
 			return true;
 		}
-		if (this.where.equals("any") && qe.getInfo().contains(phrase)) {
-			return true;
-		}
-		return false;
+		return this.where.equals("any") && qe.getInfo().contains(phrase);
 	}
 
 }

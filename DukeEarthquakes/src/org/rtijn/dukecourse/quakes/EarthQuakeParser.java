@@ -1,3 +1,4 @@
+package org.rtijn.dukecourse.quakes;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,3 +1,5 @@
+package org.rtijn.dukecourse.quakes;
+
 import java.util.*;
 
 
@@ -25,6 +27,11 @@ public class EarthQuakeClient2 {
 		System.out.println("read data for " + list.size() + " quakes");
 		ArrayList<QuakeEntry> answer = new ArrayList<>();
 		answer = this.filter(list, new DepthFilter(-12000, -10000));
+		for (QuakeEntry quakeEntry : answer) {
+			System.out.println(quakeEntry);
+		}
+		System.out.println(answer.size());
+
 	}
 	
 	public void quakesWithFilter() {
@@ -35,12 +42,12 @@ public class EarthQuakeClient2 {
 		ArrayList<QuakeEntry> list = parser.read(source);
 		System.out.println("read data for " + list.size() + " quakes");
 
-//		Location tokyo = new Location(35.42, 139.43);
-//		Location denver = new Location(39.7392, -104.9903);
+//		org.rtijn.dukecourse.quakes.Location tokyo = new org.rtijn.dukecourse.quakes.Location(35.42, 139.43);
+//		org.rtijn.dukecourse.quakes.Location denver = new org.rtijn.dukecourse.quakes.Location(39.7392, -104.9903);
 		
 		ArrayList<QuakeEntry> filteredQuakeList = new ArrayList<>();
 
-//		filteredQuakeList = filter(list, new DistanceFilter(denver, 1000000));
+//		filteredQuakeList = filter(list, new org.rtijn.dukecourse.quakes.DistanceFilter(denver, 1000000));
 		filteredQuakeList = filter(filteredQuakeList, new PhraseFilter("any", "o"));
 		filteredQuakeList = filter(list, new MagnitudeFilter(1.0, 4.0));
 		filteredQuakeList = filter(filteredQuakeList, new DepthFilter(-180000, -30000));
@@ -74,7 +81,7 @@ public class EarthQuakeClient2 {
 		String source = "data/nov20quakedata.atom";
 		ArrayList<QuakeEntry> list = parser.read(source);
 		System.out.println("read data for " + list.size() + " quakes");
-//		Location tulsa = new Location(36.1314, -95.9372);
+//		org.rtijn.dukecourse.quakes.Location tulsa = new org.rtijn.dukecourse.quakes.Location(36.1314, -95.9372);
 		Location billund = new Location(55.7308, 9.1153);
 		MatchAllFilter maf = new MatchAllFilter();
 		maf.addFilter(new MagnitudeFilter(0.0, 5.0));

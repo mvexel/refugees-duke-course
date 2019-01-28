@@ -1,3 +1,5 @@
+package org.rtijn.dukecourse.quakes;
+
 import java.util.*;
 
 

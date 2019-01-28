@@ -1,3 +1,4 @@
+package org.rtijn.dukecourse.quakes;
 
 public class DistanceFilter implements Filter {
 

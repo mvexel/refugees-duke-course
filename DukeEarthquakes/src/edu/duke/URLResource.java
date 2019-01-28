@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 
@@ -185,7 +187,7 @@ public class URLResource {
     private String initFromStream (InputStream stream) {
         BufferedReader buff = null;
         try {
-            buff = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+            buff = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
             StringBuilder contents = new StringBuilder();
             String line = null;
             while ((line = buff.readLine()) != null) {

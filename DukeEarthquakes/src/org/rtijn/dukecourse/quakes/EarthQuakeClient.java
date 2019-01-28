@@ -1,3 +1,5 @@
+package org.rtijn.dukecourse.quakes;
+
 import java.util.*;
 
 
@@ -43,7 +45,7 @@ public class EarthQuakeClient {
 		System.out.println("read data for " + list.size() + " quakes");
 
 		// This location is Durham, NC
-		// Location city = new Location(35.988, -78.907);
+		// org.rtijn.dukecourse.quakes.Location city = new org.rtijn.dukecourse.quakes.Location(35.988, -78.907);
 
 		// This location is Bridgeport, CA
 		Location city = new Location(38.17, -118.82);
