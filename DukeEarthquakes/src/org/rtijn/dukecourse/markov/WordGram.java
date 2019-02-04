@@ -37,4 +37,8 @@ public class WordGram {
         WordGram out = new WordGram(thatWords, 0, thatWords.length);
         return out;
     }
+
+    public int hashCode() {
+        return this.toString().hashCode();
+    }
 }

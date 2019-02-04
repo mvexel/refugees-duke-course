@@ -22,10 +22,12 @@ public class MarkovRunner {
 //		runner.runMarkovOne();
 //		runner.runMarkovFour();
 //		runner.runMarkovModel();
-        runner.runMarkovWord();
+//        runner.runMarkovWord();
 //		runner.runWordMarkovTwo();
 //		runner.runMarkov();
 //		runner.runWordMarkovTwo();
+//        runner.testHashMap();
+        runner.compareMethods();
     }
 
     public void runMarkovZero() {
@@ -84,6 +86,8 @@ public class MarkovRunner {
     public void runMarkovWord() throws Exception {
         String st = readFile("data/confucius.txt", StandardCharsets.UTF_8);
         st = st.replace('\n', ' ');
+//        String st = "this is a test yes this is a test a simple test that can tell us about the rest.";
+
         MarkovWord markov = new MarkovWord(3);
         markov.setTraining(st);
         markov.setRandom(643);
@@ -117,6 +121,30 @@ public class MarkovRunner {
         st = st.replace('\n', ' ');
         MarkovWordTwo markovWord = new MarkovWordTwo();
         runModel(markovWord, st, 100, 832);
+    }
+
+    public void testHashMap() throws IOException {
+//        String st = "this is a test yes this is really a test";
+        String st = "this is a test yes this is really a test yes a test this is wow";
+        EfficientMarkovWord model = new EfficientMarkovWord(2);
+        model.setRandom(42);
+        model.setTraining(st);
+        model.printHashMapInfo();
+    }
+
+    public void compareMethods() throws IOException {
+        String st = readFile("data/hawthorne.txt", StandardCharsets.UTF_8);
+        st = st.replace('\n', ' ');
+        MarkovWord markovWord = new MarkovWord(2);
+        EfficientMarkovWord efficientMarkovWord = new EfficientMarkovWord(2);
+        long t0 = System.nanoTime();
+        runModel(markovWord, st, 100, 42);
+        long t1 = System.nanoTime();
+        System.out.println("non-hashmap model took " + (t1 - t0));
+        t0 = System.nanoTime();
+        runModel(efficientMarkovWord, st, 100, 42);
+        t1 = System.nanoTime();
+        System.out.println("non-hashmap model took " + (t1 - t0));
     }
 
     private void printOut(String s) {
