@@ -17,16 +17,14 @@
 
 package org.apache.commons.csv;
 
-import static org.apache.commons.csv.Constants.CR;
-import static org.apache.commons.csv.Constants.LF;
-import static org.apache.commons.csv.Constants.SP;
-
 import java.io.Closeable;
 import java.io.Flushable;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
+
+import static org.apache.commons.csv.Constants.*;
 
 /**
  * Prints values in a {@link CSVFormat CSV format}.
@@ -67,11 +65,15 @@ import java.util.Arrays;
  */
 public final class CSVPrinter implements Flushable, Closeable {
 
-    /** The place that the values get written. */
+    /**
+     * The place that the values get written.
+     */
     private final Appendable out;
     private final CSVFormat format;
 
-    /** True if we just began a new record. */
+    /**
+     * True if we just began a new record.
+     */
     private boolean newRecord = true;
 
     /**
@@ -81,14 +83,10 @@ public final class CSVPrinter implements Flushable, Closeable {
      * and escaping with a different character) are not supported.
      * </p>
      *
-     * @param out
-     *            stream to which to print. Must not be null.
-     * @param format
-     *            the CSV format. Must not be null.
-     * @throws IOException
-     *             thrown if the optional header cannot be printed.
-     * @throws IllegalArgumentException
-     *             thrown if the parameters of the format are inconsistent or if either out or format are null.
+     * @param out    stream to which to print. Must not be null.
+     * @param format the CSV format. Must not be null.
+     * @throws IOException              thrown if the optional header cannot be printed.
+     * @throws IllegalArgumentException thrown if the parameters of the format are inconsistent or if either out or format are null.
      */
     public CSVPrinter(final Appendable out, final CSVFormat format) throws IOException {
         Assertions.notNull(out, "out");
@@ -121,10 +119,9 @@ public final class CSVPrinter implements Flushable, Closeable {
 
     /**
      * Closes the underlying stream with an optional flush first.
-     * @param flush whether to flush before the actual close.
      *
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param flush whether to flush before the actual close.
+     * @throws IOException If an I/O error occurs
      * @since 1.6
      */
     public void close(final boolean flush) throws IOException {
@@ -139,8 +136,7 @@ public final class CSVPrinter implements Flushable, Closeable {
     /**
      * Flushes the underlying stream.
      *
-     * @throws IOException
-     *             If an I/O error occurs
+     * @throws IOException If an I/O error occurs
      */
     @Override
     public void flush() throws IOException {
@@ -161,10 +157,8 @@ public final class CSVPrinter implements Flushable, Closeable {
     /**
      * Prints the string as the next value on the line. The value will be escaped or encapsulated as needed.
      *
-     * @param value
-     *            value to be output.
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param value value to be output.
+     * @throws IOException If an I/O error occurs
      */
     public void print(final Object value) throws IOException {
         format.print(value, out, newRecord);
@@ -187,10 +181,8 @@ public final class CSVPrinter implements Flushable, Closeable {
      * to start a new line of the comment. Note that this might produce unexpected results for formats that do not use
      * line breaks as record separator.</p>
      *
-     * @param comment
-     *            the comment to output
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param comment the comment to output
+     * @throws IOException If an I/O error occurs
      */
     public void printComment(final String comment) throws IOException {
         if (!format.isCommentMarkerSet()) {
@@ -204,19 +196,19 @@ public final class CSVPrinter implements Flushable, Closeable {
         for (int i = 0; i < comment.length(); i++) {
             final char c = comment.charAt(i);
             switch (c) {
-            case CR:
-                if (i + 1 < comment.length() && comment.charAt(i + 1) == LF) {
-                    i++;
-                }
-                //$FALL-THROUGH$ break intentionally excluded.
-            case LF:
-                println();
-                out.append(format.getCommentMarker().charValue());
-                out.append(SP);
-                break;
-            default:
-                out.append(c);
-                break;
+                case CR:
+                    if (i + 1 < comment.length() && comment.charAt(i + 1) == LF) {
+                        i++;
+                    }
+                    //$FALL-THROUGH$ break intentionally excluded.
+                case LF:
+                    println();
+                    out.append(format.getCommentMarker().charValue());
+                    out.append(SP);
+                    break;
+                default:
+                    out.append(c);
+                    break;
             }
         }
         println();
@@ -225,8 +217,7 @@ public final class CSVPrinter implements Flushable, Closeable {
     /**
      * Outputs the record separator.
      *
-     * @throws IOException
-     *             If an I/O error occurs
+     * @throws IOException If an I/O error occurs
      */
     public void println() throws IOException {
         format.println(out);
@@ -241,10 +232,8 @@ public final class CSVPrinter implements Flushable, Closeable {
      * separator to the output after printing the record, so there is no need to call {@link #println()}.
      * </p>
      *
-     * @param values
-     *            values to output.
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param values values to output.
+     * @throws IOException If an I/O error occurs
      */
     public void printRecord(final Iterable<?> values) throws IOException {
         for (final Object value : values) {
@@ -261,10 +250,8 @@ public final class CSVPrinter implements Flushable, Closeable {
      * separator to the output after printing the record, so there is no need to call {@link #println()}.
      * </p>
      *
-     * @param values
-     *            values to output.
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param values values to output.
+     * @throws IOException If an I/O error occurs
      */
     public void printRecord(final Object... values) throws IOException {
         format.printRecord(out, values);
@@ -305,10 +292,8 @@ public final class CSVPrinter implements Flushable, Closeable {
      * </code>
      * </pre>
      *
-     * @param values
-     *            the values to print.
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param values the values to print.
+     * @throws IOException If an I/O error occurs
      */
     public void printRecords(final Iterable<?> values) throws IOException {
         for (final Object value : values) {
@@ -356,10 +341,8 @@ public final class CSVPrinter implements Flushable, Closeable {
      * </code>
      * </pre>
      *
-     * @param values
-     *            the values to print.
-     * @throws IOException
-     *             If an I/O error occurs
+     * @param values the values to print.
+     * @throws IOException If an I/O error occurs
      */
     public void printRecords(final Object... values) throws IOException {
         printRecords(Arrays.asList(values));
@@ -368,12 +351,9 @@ public final class CSVPrinter implements Flushable, Closeable {
     /**
      * Prints all the objects in the given JDBC result set.
      *
-     * @param resultSet
-     *            result set the values to print.
-     * @throws IOException
-     *             If an I/O error occurs
-     * @throws SQLException
-     *             if a database access error occurs
+     * @param resultSet result set the values to print.
+     * @throws IOException  If an I/O error occurs
+     * @throws SQLException if a database access error occurs
      */
     public void printRecords(final ResultSet resultSet) throws SQLException, IOException {
         final int columnCount = resultSet.getMetaData().getColumnCount();

@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7747f402-c1ce-4847-a82c-fd670a1d6363" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/TitleAndDepthComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/TitleLastAndMagnitudeComparator.java" afterDir="false" />
+    <list default="true" id="7747f402-c1ce-4847-a82c-fd670a1d6363" name="Default Changelist" comment="refactoring">
+      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/FirstRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/Rater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DukeEarthquakes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DukeEarthquakes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/DirectoryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/DirectoryResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/FileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/FileResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/FileSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/FileSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/ImageFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/ImageFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/ImageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/ImageResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/Pixel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/Pixel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/RangeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/RangeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/ResourceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/ResourceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/StorageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/StorageResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/TextIterable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/TextIterable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/duke/URLResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/duke/URLResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/Assertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/Assertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/CSVRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/ExtendedBufferedReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/ExtendedBufferedReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/apache/commons/csv/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/apache/commons/csv/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/EfficientMarkovModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/EfficientMarkovModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/IMarkovModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/IMarkovModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunnerWithInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunnerWithInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGramTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGramTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DepthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DepthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/LargestQuakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/LargestQuakes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MatchAllFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MatchAllFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MinMagFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MinMagFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/PhraseFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/PhraseFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../course4/week3/3-word_ngram_starter/MarkovWordTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortWithTwoArrayLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortWithTwoArrayLists.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,31 +74,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="DukeEarthquakes" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+            <state relative-caret-position="270">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java">
+        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="253">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java">
+        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/LargestQuakes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -51,29 +121,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="184">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGramTester.java">
+        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -96,6 +154,7 @@
       <find>tests</find>
       <find>indexo</find>
       <find>runmo</find>
+      <find>markovwo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,18 +178,29 @@
         <option value="$PROJECT_DIR$/src/org/rtijn/wordgrams/MarkovRunnerWithInterface.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/wordgrams/MarkovRunner.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/wordgrams/MarkovWord.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/TitleAndDepthComparator.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/TitleLastAndDepthComparator.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/TitleLastAndMagnitudeComparator.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java" />
-        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java" />
+        <option value="$PROJECT_DIR$/src/org/apache/commons/csv/Lexer.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java" />
         <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGramTester.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MatchAllFilter.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceComparator.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient2.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortWithTwoArrayLists.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/LargestQuakes.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeComparator.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/FirstRatings.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java" />
+        <option value="$PROJECT_DIR$/src/edu/duke/RangeResource.java" />
+        <option value="$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java" />
       </list>
     </option>
   </component>
@@ -140,7 +210,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="204" />
     <option name="y" value="48" />
     <option name="width" value="1660" />
@@ -148,7 +218,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -185,6 +255,14 @@
               <item name="dukecourse" type="462c0819:PsiDirectoryNode" />
               <item name="markov" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DukeEarthquakes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DukeEarthquakes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="dukecourse" type="462c0819:PsiDirectoryNode" />
+              <item name="quakes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -194,14 +272,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548952038289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549257132326" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.rtijn.dukecourse.quakes" />
       <recent name="org.rtijn.wordgrams" />
@@ -223,10 +305,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WordGramTester">
+  <component name="RunManager" selected="Application.MarkovRunner (1)">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.rtijn.dukecourse.ratings.App" />
+      <module name="DukeEarthquakes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rtijn.dukecourse.ratings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DifferentSorters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.rtijn.dukecourse.quakes.DifferentSorters" />
-      <module name="DukeCourse" />
+      <module name="DukeEarthquakes" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.rtijn.dukecourse.quakes.*" />
@@ -239,7 +334,7 @@
     </configuration>
     <configuration name="MarkovRunner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.rtijn.dukecourse.markov.MarkovRunner" />
-      <module name="DukeCourse" />
+      <module name="DukeEarthquakes" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.rtijn.dukecourse.markov.*" />
@@ -250,22 +345,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MarkovRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.rtijn.wordgrams.MarkovRunner" />
-      <module name="DukeCourse" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.rtijn.wordgrams.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="QuakeSortInPlace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.rtijn.dukecourse.quakes.QuakeSortInPlace" />
-      <module name="DukeCourse" />
+      <module name="DukeEarthquakes" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.rtijn.dukecourse.quakes.*" />
@@ -278,7 +360,7 @@
     </configuration>
     <configuration name="WordGramTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.rtijn.dukecourse.markov.WordGramTester" />
-      <module name="DukeCourse" />
+      <module name="DukeEarthquakes" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.rtijn.dukecourse.markov.*" />
@@ -289,13 +371,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.DifferentSorters" />
+      <item itemvalue="Application.MarkovRunner (1)" />
+      <item itemvalue="Application.QuakeSortInPlace" />
+      <item itemvalue="Application.WordGramTester" />
+      <item itemvalue="Application.App" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WordGramTester" />
         <item itemvalue="Application.MarkovRunner (1)" />
-        <item itemvalue="Application.DifferentSorters" />
+        <item itemvalue="Application.WordGramTester" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.QuakeSortInPlace" />
-        <item itemvalue="Application.MarkovRunner" />
+        <item itemvalue="Application.DifferentSorters" />
       </list>
     </recent_temporary>
   </component>
@@ -320,10 +409,49 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="204" y="48" width="1660" height="1008" extended-state="0" />
+    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5051546" visible="true" weight="0.19839308" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50080514" visible="true" weight="0.20454545" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.49919486" side_tool="true" weight="0.20454545" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3236715" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39613527" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32850242" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3268921" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32846716" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24924242" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32956383" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" auto_hide="true" x="483" y="217" width="313" height="388" id="Structure" order="8" sideWeight="0.49484536" weight="0.25227273" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5051546" visible="true" weight="0.20454545" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -350,41 +478,17 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" auto_hide="true" x="483" y="217" width="313" height="388" id="Structure" order="8" sideWeight="0.49484536" weight="0.25282714" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5051546" visible="true" weight="0.25282714" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32846716" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32969433" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.43357664" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3970803" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329927" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.329927" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3270073" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24959612" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.32956383" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" auto_hide="true" x="483" y="217" width="313" height="388" id="Structure" order="8" sideWeight="0.49484536" weight="0.25282714" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="saturday morning catch up" />
     <MESSAGE value="refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -418,12 +522,6 @@
           <line>36</line>
           <properties />
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java</url>
@@ -517,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MatchAllFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MinMagFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -538,24 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortWithTwoArrayLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -570,34 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -630,38 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -672,38 +693,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        <state relative-caret-position="335">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordOne.java">
+    <entry file="file://$PROJECT_DIR$/src/org/apache/commons/csv/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="139">
+          <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/AbstractMarkovModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWordTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+        <state relative-caret-position="75">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -712,8 +732,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGramTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="240">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MatchAllFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DistanceComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1270">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortWithTwoArrayLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/DifferentSorters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/LargestQuakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/ClosestQuakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/duke/RangeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="65" column="7" selection-start-line="65" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/MarkovWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/ratings/FirstRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/QuakeSortInPlace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="185" selection-start-line="185" selection-end-line="185" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/MagnitudeComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/markov/WordGram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/rtijn/dukecourse/quakes/EarthQuakeClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -775,6 +914,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

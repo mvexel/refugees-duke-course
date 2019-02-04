@@ -1,13 +1,18 @@
 package org.rtijn.dukecourse.quakes;
 
-import java.util.*;
-
+import java.util.ArrayList;
 
 public class EarthQuakeClient2 {
 	public EarthQuakeClient2() {
 		// TODO Auto-generated constructor stub
 	}
 
+	public static void main(String[] args) {
+		EarthQuakeClient2 client = new EarthQuakeClient2();
+//		client.quakesWithFilter();
+//		client.testMatchAllFilter();
+		client.testMatchAllFilter2();
+	}
 
 	public ArrayList<QuakeEntry> filter(ArrayList<QuakeEntry> quakeData, Filter f) {
 		ArrayList<QuakeEntry> answer = new ArrayList<QuakeEntry>();
@@ -33,7 +38,7 @@ public class EarthQuakeClient2 {
 		System.out.println(answer.size());
 
 	}
-	
+
 	public void quakesWithFilter() {
 		EarthQuakeParser parser = new EarthQuakeParser();
 		// String source =
@@ -44,7 +49,7 @@ public class EarthQuakeClient2 {
 
 //		org.rtijn.dukecourse.quakes.Location tokyo = new org.rtijn.dukecourse.quakes.Location(35.42, 139.43);
 //		org.rtijn.dukecourse.quakes.Location denver = new org.rtijn.dukecourse.quakes.Location(39.7392, -104.9903);
-		
+
 		ArrayList<QuakeEntry> filteredQuakeList = new ArrayList<>();
 
 //		filteredQuakeList = filter(list, new org.rtijn.dukecourse.quakes.DistanceFilter(denver, 1000000));
@@ -56,7 +61,6 @@ public class EarthQuakeClient2 {
 		}
 		System.out.println(filteredQuakeList.size());
 	}
-
 
 	public void testMatchAllFilter() {
 		EarthQuakeParser parser = new EarthQuakeParser();
@@ -74,7 +78,6 @@ public class EarthQuakeClient2 {
 		System.out.println(result.size());
 		System.out.println(maf.getName());
 	}
-
 
 	public void testMatchAllFilter2() {
 		EarthQuakeParser parser = new EarthQuakeParser();
@@ -94,7 +97,6 @@ public class EarthQuakeClient2 {
 		System.out.println(result.size());
 	}
 
-
 	public void createCSV() {
 		EarthQuakeParser parser = new EarthQuakeParser();
 		// String source = "../data/nov20quakedata.atom";
@@ -106,20 +108,11 @@ public class EarthQuakeClient2 {
 		System.out.println("# quakes read: " + list.size());
 	}
 
-
 	public void dumpCSV(ArrayList<QuakeEntry> list) {
 		System.out.println("Latitude,Longitude,Magnitude,Info");
 		for (QuakeEntry qe : list) {
 			System.out.printf("%4.2f,%4.2f,%4.2f,%s\n", qe.getLocation().getLatitude(), qe.getLocation().getLongitude(),
 					qe.getMagnitude(), qe.getInfo());
 		}
-	}
-
-
-	public static void main(String[] args) {
-		EarthQuakeClient2 client = new EarthQuakeClient2();
-//		client.quakesWithFilter();
-//		client.testMatchAllFilter();
-		client.testMatchAllFilter2();
 	}
 }

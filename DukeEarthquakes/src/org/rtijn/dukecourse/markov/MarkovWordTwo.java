@@ -1,12 +1,14 @@
 package org.rtijn.dukecourse.markov;
+
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * Markov word prediction, order 2
- * 
+ *
  * @author Martijn van Exel
  * @version 0.0.1
  */
-
-import java.util.*;
 
 public class MarkovWordTwo implements IMarkovModel {
     private String[] myText;
@@ -20,18 +22,18 @@ public class MarkovWordTwo implements IMarkovModel {
         myRandom = new Random(seed);
     }
 
-    public void setTraining(String text){
+    public void setTraining(String text) {
         myText = text.split("\\s+");
     }
 
-    public String getRandomText(int numWords){
+    public String getRandomText(int numWords) {
         StringBuilder sb = new StringBuilder();
-        int index = myRandom.nextInt(myText.length-2);  // random word to start with
+        int index = myRandom.nextInt(myText.length - 2);  // random word to start with
         String key1 = myText[index];
         String key2 = myText[index + 1];
         sb.append(key1 + " " + key2);
         sb.append(" ");
-        for(int k=0; k < numWords-1; k++){
+        for (int k = 0; k < numWords - 1; k++) {
             ArrayList<String> follows = getFollows(key1, key2);
             if (follows.size() == 0) {
                 break;
@@ -86,7 +88,7 @@ public class MarkovWordTwo implements IMarkovModel {
 
     private int indexOf(String[] words, String target1, String target2, int start) {
         for (int i = start; i < words.length - 1; i++) {
-            if (words[i].equals(target1) && words[i+1].equals(target2)) {
+            if (words[i].equals(target1) && words[i + 1].equals(target2)) {
                 return i;
             }
         }

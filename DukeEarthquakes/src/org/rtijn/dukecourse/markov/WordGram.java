@@ -11,16 +11,16 @@ public class WordGram {
 
     public String wordAt(int index) {
         if (index < 0 || index >= myWords.length) {
-            throw new IndexOutOfBoundsException("bad index in wordAt "+index);
+            throw new IndexOutOfBoundsException("bad index in wordAt " + index);
         }
         return myWords[index];
     }
 
-    public int length(){
+    public int length() {
         return myWords.length;
     }
 
-    public String toString(){
+    public String toString() {
         String ret = String.join(" ", myWords);
         return ret.trim();
     }

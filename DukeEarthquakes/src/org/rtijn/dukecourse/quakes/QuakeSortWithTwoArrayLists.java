@@ -1,7 +1,6 @@
 package org.rtijn.dukecourse.quakes;
 
-import java.util.*;
-
+import java.util.ArrayList;
 
 public class QuakeSortWithTwoArrayLists {
 	// This is the code from the Video of Selection Sort with Two ArrayLists

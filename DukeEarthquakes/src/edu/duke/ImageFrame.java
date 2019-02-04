@@ -1,21 +1,16 @@
 package edu.duke;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 
 /**
  * This utility class implements a panel for displaying an image.
- * 
+ *
  * @author Duke Software Team
- * 
- *         This software is licensed with an Apache 2 license, see
- *         http://www.apache.org/licenses/LICENSE-2.0 for details.
+ * <p>
+ * This software is licensed with an Apache 2 license, see
+ * http://www.apache.org/licenses/LICENSE-2.0 for details.
  */
 class ImageFrame extends JFrame {
     private static final long serialVersionUID = 1L;
@@ -24,7 +19,7 @@ class ImageFrame extends JFrame {
     /**
      * Creates an ImageFrame.
      */
-    public ImageFrame (String fileName, Image image) {
+    public ImageFrame(String fileName, Image image) {
         setTitle(fileName);
         // setResizable(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -33,7 +28,7 @@ class ImageFrame extends JFrame {
     /**
      * Displays an image in this frame.
      */
-    void show (Image image) {
+    void show(Image image) {
         if (myPanel == null) {
             myPanel = new ImagePanel(image, image.getWidth(this), image.getHeight(this));
             Container c = getContentPane();
@@ -55,7 +50,7 @@ class ImageFrame extends JFrame {
         /**
          * Creates an ImagePanel.
          */
-        public ImagePanel (Image image, int width, int height) {
+        public ImagePanel(Image image, int width, int height) {
             setBackground(Color.white);
             setPreferredSize(new Dimension(width, height));
             myImage = image;
@@ -64,7 +59,7 @@ class ImageFrame extends JFrame {
         /**
          * Resets the image and redraws it in the panel.
          */
-        public void setImage (Image image, int width, int height) {
+        public void setImage(Image image, int width, int height) {
             this.myImage = image;
             setPreferredSize(new Dimension(width, height));
             repaint();
@@ -74,7 +69,7 @@ class ImageFrame extends JFrame {
          * Draws the image in the panel if the image is not null.
          */
         @Override
-        public void paintComponent (Graphics g) {
+        public void paintComponent(Graphics g) {
             super.paintComponent(g);
             if (myImage != null) {
                 g.drawImage(myImage, 0, 0, Color.white, this);

@@ -1,9 +1,11 @@
 package org.rtijn.dukecourse.quakes;
 
-import java.util.*;
-
+import java.util.ArrayList;
 
 public class EarthQuakeClient {
+	public EarthQuakeClient() {
+	}
+
 	public static void main(String[] args) {
 		EarthQuakeClient client = new EarthQuakeClient();
 //		client.bigQuakes();
@@ -12,12 +14,6 @@ public class EarthQuakeClient {
 		client.quakesByPhrase();
 //		client.findClosestQuakes();
 	}
-
-
-	public EarthQuakeClient() {
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public void bigQuakes() {
 		EarthQuakeParser parser = new EarthQuakeParser();

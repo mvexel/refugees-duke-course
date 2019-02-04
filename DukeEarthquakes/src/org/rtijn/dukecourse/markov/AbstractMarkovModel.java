@@ -1,4 +1,8 @@
 package org.rtijn.dukecourse.markov;
+
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * Abstract class AbstractMarkovModel - write a description of the class here
  *
@@ -6,16 +10,14 @@ package org.rtijn.dukecourse.markov;
  * @version (version number or date here)
  */
 
-import java.util.*;
-
 public abstract class AbstractMarkovModel implements IMarkovModel {
     String myText;
     Random myRandom;
-    
+
     AbstractMarkovModel() {
         myRandom = new Random();
     }
-    
+
     public void setTraining(String s) {
         myText = s.trim();
     }

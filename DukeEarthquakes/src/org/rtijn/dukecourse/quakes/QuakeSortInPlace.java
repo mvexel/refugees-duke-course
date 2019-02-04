@@ -1,13 +1,14 @@
 package org.rtijn.dukecourse.quakes;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Write a description of class org.rtijn.dukecourse.quakes.QuakeSortInPlace here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-
-import java.util.*;
-
 
 public class QuakeSortInPlace {
     public QuakeSortInPlace() {
@@ -88,9 +89,9 @@ public class QuakeSortInPlace {
 //		sortByMagnitudeWithBubbleSort(list);
         sortByMagnitudeWithBubbleSortWithCheck(list);
 //		sortByMagnitudeWithCheck(list);
-		for (QuakeEntry qe : list) {
-			System.out.println(qe);
-		}
+        for (QuakeEntry qe : list) {
+            System.out.println(qe);
+        }
 
     }
 
