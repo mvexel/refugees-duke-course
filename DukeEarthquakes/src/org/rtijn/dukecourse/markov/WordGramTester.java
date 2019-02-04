@@ -35,12 +35,23 @@ public class WordGramTester {
 	public void testShiftAdd() {
 		String[] testArray = {"this", "is", "just", "a", "test"};
 		WordGram w = new WordGram(testArray, 0, testArray.length);
-		WordGram w1 = w.shiftAdd("understood");
+		String newWord = "understood";
+		System.out.println("original wordgram: " + w);
+		System.out.println("extra word to shift: " + newWord);
+		WordGram w1 = w.shiftAdd(newWord);
 		System.out.println(w1);
+	}
+
+	public void testIndexOf() {
+		String[] testArray = {"this", "is", "just", "a", "test"};
+		WordGram w = new WordGram(testArray, 0, testArray.length);
+
 	}
 
 	public static void main(String[] args) {
 		WordGramTester tester = new WordGramTester();
 		tester.testShiftAdd();
+		tester.testWordGram();
+		tester.testWordGramEquals();
 	}
 }

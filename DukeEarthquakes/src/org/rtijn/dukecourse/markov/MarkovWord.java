@@ -25,7 +25,7 @@ public class MarkovWord implements IMarkovModel {
         WordGram w = new WordGram(myText, index, myOrder);
         sb.append(w.toString());
         sb.append(" ");
-        for(int k=0; k < numWords - myOrder; k++){
+        for (int k = 0; k < numWords - myOrder; k++) {
             ArrayList<String> follows = getFollows(w);
             if (follows.size() == 0) {
                 break;
@@ -39,14 +39,23 @@ public class MarkovWord implements IMarkovModel {
         return sb.toString().trim();
     }
 
-    public void setTraining(String text){
+    public void setTraining(String text) {
         myText = text.split("\\s+");
     }
 
     public int indexOf(String[] words, WordGram target, int start) {
-        for (int i = start; i < words.length - target.length() ; i++) {
+
+        /* The indexOf method has three parameters, a String array of all the words
+        in the training text named words, a WordGram named target, and an integer
+        named start indicating where to start looking for a WordGram match in words.
+        This method should return the first position from start that has words in the
+        array words that match the WordGram target. If there is no such match then return -1. */
+
+        for (int i = start; i < words.length - target.length(); i++) {
             WordGram candidate = new WordGram(words, i, target.length());
-            if (candidate.equals(target)) { return i; }
+            if (candidate.equals(target)) {
+                return i;
+            }
         }
         return -1;
     }

@@ -1,4 +1,4 @@
-
+package org.rtijn.dukecourse.markov;
 /**
  * Markov word prediction, order 2
  * 

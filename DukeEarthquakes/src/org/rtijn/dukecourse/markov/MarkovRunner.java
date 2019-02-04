@@ -16,6 +16,17 @@ public class MarkovRunner {
 		return new String(encoded, encoding);
 	}
 
+	public static void main(String[] args) throws Exception {
+		MarkovRunner runner = new MarkovRunner();
+//		runner.runMarkovZero();
+//		runner.runMarkovOne();
+//		runner.runMarkovFour();
+//		runner.runMarkovModel();
+//		runner.runMarkovWord();
+//		runner.runWordMarkovTwo();
+//		runner.runMarkov();
+		runner.runWordMarkovTwo();
+	}
 
 	public void runMarkovZero() {
 		FileResource fr = new FileResource();
@@ -29,7 +40,6 @@ public class MarkovRunner {
 			printOut(text);
 		}
 	}
-
 
 	public void runMarkovOne() throws IOException {
 //		FileResource fr = new FileResource();
@@ -45,7 +55,6 @@ public class MarkovRunner {
 			printOut(text);
 		}
 	}
-
 
 	public void runMarkovFour() throws IOException {
 		String st = readFile("data/confucius.txt", StandardCharsets.UTF_8);
@@ -82,6 +91,33 @@ public class MarkovRunner {
 		printOut(text);
 	}
 
+ 	public void runMarkov() throws Exception {
+		String st = readFile("data/confucius.txt", StandardCharsets.UTF_8);
+		st = st.replace('\n', ' ');
+//		String st = "this is just a test yes this is a simple test";
+		MarkovWordOne markov = new MarkovWordOne();
+		markov.setTraining(st);
+		markov.setRandom(139);
+		String text = markov.getRandomText(120);
+		printOut(text);
+	}
+
+	public void runModel(IMarkovModel markov, String text, int size, int seed) {
+		markov.setTraining(text);
+		markov.setRandom(seed);
+		System.out.println("running with " + markov);
+		for(int k=0; k < 3; k++){
+			String st = markov.getRandomText(size);
+			printOut(st);
+		}
+	}
+
+	public void runWordMarkovTwo() throws IOException {
+		String st = readFile("data/confucius.txt", StandardCharsets.UTF_8);
+		st = st.replace('\n', ' ');
+		MarkovWordTwo markovWord = new MarkovWordTwo();
+		runModel(markovWord, st, 100, 832);
+	}
 
 	private void printOut(String s) {
 		String[] words = s.split("\\s+");
@@ -96,15 +132,5 @@ public class MarkovRunner {
 			}
 		}
 		System.out.println("\n----------------------------------");
-	}
-
-
-	public static void main(String[] args) throws Exception {
-		MarkovRunner runner = new MarkovRunner();
-//		runner.runMarkovZero();
-//		runner.runMarkovOne();
-//		runner.runMarkovFour();
-//		runner.runMarkovModel();
-		runner.runMarkovWord();
 	}
 }
